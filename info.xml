@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<info xmlns="http://nextcloud.org/ns">
+    <id>employee_manager</id>
+    <name>Employee Manager</name>
+    <description>A Nextcloud app for managing employee records.</description>
+    <version>1.0.0</version>
+    <licence>AGPL</licence>
+    <author>morsresistis</author>
+    <namespace>EmployeeManager</namespace>
+    <default_enable>yes</default_enable>
+    <types>
+        <background-job/>
+    </types>
+    <dependencies>
+        <nextcloud min-version="24" max-version="27"/>
+    </dependencies>
+</info>
