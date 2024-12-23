@@ -1,15 +1,29 @@
 <?php
+
+declare(strict_types=1);
+
 namespace OCA\EmployeeManager\Controller;
 
+use OCA\EmployeeManager\AppInfo\Application;
 use OCP\AppFramework\Controller;
-use OCP\IRequest;
+use OCP\AppFramework\Http\Attribute\FrontpageRoute;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
+use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
+use OCP\AppFramework\Http\Attribute\OpenAPI;
+use OCP\AppFramework\Http\TemplateResponse;
 
+/**
+ * @psalm-suppress UnusedClass
+ */
 class PageController extends Controller {
-    public function __construct(IRequest $request) {
-        parent::__construct('employee_manager', $request);
-    }
-
-    public function index() {
-        return new TemplateResponse('employee_manager', 'index');
-    }
+	#[NoCSRFRequired]
+	#[NoAdminRequired]
+	#[OpenAPI(OpenAPI::SCOPE_IGNORE)]
+	#[FrontpageRoute(verb: 'GET', url: '/')]
+	public function index(): TemplateResponse {
+		return new TemplateResponse(
+			Application::APP_ID,
+			'index',
+		);
+	}
 }

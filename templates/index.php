@@ -1,10 +1,11 @@
-<div id="app">
-    <h1>Employee Manager</h1>
-    <div id="table"></div>
-    <div id="filters">
-        <!-- Filters UI -->
-    </div>
-    <div id="sort-controls">
-        <!-- Sorting UI -->
-    </div>
-</div>
+<?php
+
+declare(strict_types=1);
+
+use OCP\Util;
+
+Util::addScript(OCA\EmployeeManager\AppInfo\Application::APP_ID, 'main');
+
+?>
+
+<div id="employeemanager"></div>

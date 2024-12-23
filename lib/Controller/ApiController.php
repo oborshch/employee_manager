@@ -1,9 +1,18 @@
 <?php
+
+declare(strict_types=1);
+
 namespace OCA\EmployeeManager\Controller;
 
-use OCP\AppFramework\ApiController;
-use OCP\IRequest;
+use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\ApiRoute;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
+use OCP\AppFramework\Http\DataResponse;
+use OCP\AppFramework\OCSController;
 
+/**
+ * @psalm-suppress UnusedClass
+ */
 class ApiController extends ApiController {
     private $employeeService;
 
