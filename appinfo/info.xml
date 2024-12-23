@@ -14,4 +14,9 @@
     <dependencies>
         <nextcloud min-version="24" max-version="29"/>
     </dependencies>
+    <navigation>
+        <route>page#index</route>
+        <name>Employee Manager</name>
+    </navigation>
+
 </info>
