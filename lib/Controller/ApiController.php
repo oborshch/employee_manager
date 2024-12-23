@@ -17,7 +17,7 @@ class ApiController extends ApiController {
     private $employeeService;
 
     public function __construct(IRequest $request, $employeeService) {
-        parent::__construct('employee_manager', $request);
+        parent::__construct('employeemanager', $request);
         $this->employeeService = $employeeService;
     }
 
